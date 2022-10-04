@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h1>Heading</h1>
-    <p>Paragraph</p>
+    <h1>Current Date and Time</h1>
+    <p>This is the current date and time...</p>
     <textarea id="textbox1" name="textbox1" rows="10" cols="200">
       Sample text.
     </textarea>
     <script>
-      let d = new Date();
-      document.getElementById("textbox1").value = d;
+      
+      let t = setInterval(myTimer, 1000)
+      
+      function myTimer() {
+        const d = new Date();
+        document.getElementById("textbox1").value = d;
+      }
+      
     </script>
   </body>
 </html>
