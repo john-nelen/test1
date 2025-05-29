@@ -6,19 +6,28 @@
     <textarea id="textbox1" name="textbox1" rows="10" cols="200">
       Sample text 2.
     </textarea>
+
+    <div id="output">
+
     <script>
-      
+      let nums = "";
+
       for (let i = 1; i < 10; i++)
       {
-         
+         nums += i + "\n";
       }
       let t = setInterval(myTimer, 1000)
       
       function myTimer() {
         const d = new Date();
-        document.getElementById("textbox1").value = d;
+                     
+
+      document.getElementById("textbox1").value = d;
+                     
+    document.getElementById("output").innerText = nums;
       }
       
+     
     </script>
   </body>
 </html>
